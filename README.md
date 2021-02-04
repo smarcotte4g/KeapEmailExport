@@ -46,6 +46,8 @@ INSERT INTO FileBox_20210204 SELECT * FROM FileBox;
 #### Creates an ID to use
 ```sql
 CREATE TABLE FileBoxEmailId_20210204 AS (SELECT Id FROM FileBox WHERE FileName LIKE 'email-%');
+
+ALTER TABLE FileBoxEmailId_20210204 ADD INDEX Id(Id);
 ```
 
 #### Changes a few columns to work with export
