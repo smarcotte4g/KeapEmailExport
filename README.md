@@ -50,7 +50,7 @@ CREATE TABLE FileBoxEmailId_20210204 AS (SELECT Id FROM FileBox WHERE FileName L
 ALTER TABLE FileBoxEmailId_20210204 ADD INDEX Id(Id);
 ```
 
-#### Changes a few columns to work with export
+#### Changes a few columns to work with export (Anything over 100k I would run one update at a time)
 ```sql
 UPDATE FileBox
 SET FileName=CONCAT(FileName,'.html'),
