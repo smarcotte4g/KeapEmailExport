@@ -95,11 +95,11 @@ def try_export(appname, id, count, amt):
         print("This is the current File ID: {}".format(id))
 
         # Write the exported ID to the export file if crash
-        with open("output/{}_emails/exported.log".format(appname), "a", encoding="utf-8") as gf:
+        with open("output/{}_exported.log".format(appname), "a", encoding="utf-8") as gf:
             gf.write("{}\n".format(id))
     except Exception as e:
         # Write the Error and Id to a log file
-        with open("output/{}_emails/errors.log".format(appname), "a", encoding="utf-8") as ef:
+        with open("output/{}_errors.log".format(appname), "a", encoding="utf-8") as ef:
             ef.write('Exception: %s' % e)
             ef.write("\n!!ERROR ON ID: {}\n".format(id))
             # The try writes to a file anyway with error so delete it
