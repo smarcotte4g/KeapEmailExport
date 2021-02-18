@@ -27,9 +27,7 @@ def main():
     file_path = "output/{}_emails/".format(appname)
 
     os.makedirs(file_path, exist_ok=True)
-
-    # Gets all files from FileBox that have been given through the SQL
-    # query from above, and writes all of the files individually
+    
     count = 0
     exportlist = []
 
